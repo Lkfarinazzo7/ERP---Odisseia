@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP Odisseia - Sistema de Gestão</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar Superior -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <i class="fas fa-ship"></i>
+            <span>ERP Odisseia</span>
+        </div>
+        <div class="navbar-menu">
+            <button class="btn-icon" id="notificationsBtn">
+                <i class="fas fa-bell"></i>
+                <span class="badge">3</span>
+            </button>
+            <div class="user-profile">
+                <img src="https://ui-avatars.com/api/?name=Admin&background=667eea&color=fff" alt="User">
+                <span>Admin</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Container Principal -->
+    <div class="container">
+        <!-- Menu Lateral -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Menu</h3>
+                <button class="btn-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#dashboard" class="nav-item active" data-page="dashboard">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#contratos" class="nav-item" data-page="contratos">
+                    <i class="fas fa-file-contract"></i>
+                    <span>Contratos</span>
+                </a>
+                <a href="#receitas" class="nav-item" data-page="receitas">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Receitas</span>
+                </a>
+                <a href="#despesas" class="nav-item" data-page="despesas">
+                    <i class="fas fa-receipt"></i>
+                    <span>Despesas</span>
+                </a>
+                <a href="#comissoes" class="nav-item" data-page="comissoes">
+                    <i class="fas fa-percentage"></i>
+                    <span>Comissões</span>
+                </a>
+                <a href="#relatorios" class="nav-item" data-page="relatorios">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Relatórios</span>
+                </a>
+                <a href="#configuracoes" class="nav-item" data-page="configuracoes">
+                    <i class="fas fa-cog"></i>
+                    <span>Configurações</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="btn-logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Sair</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Área de Conteúdo -->
+        <main class="content" id="mainContent">
+            <!-- Dashboard Page -->
+            <div class="page active" id="dashboard">
+                <div class="page-header">
+                    <h1>Bem-vindo ao ERP Odisseia</h1>
+                    <p>Sistema de Gestão para Corretoras</p>
+                </div>
+
+                <div class="dashboard-cards">
+                    <div class="card card-primary">
+                        <div class="card-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Contratos Ativos</h3>
+                            <p class="card-value">0</p>
+                        </div>
+                    </div>
+
+                    <div class="card card-success">
+                        <div class="card-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Receitas do Mês</h3>
+                            <p class="card-value">R$ 0,00</p>
+                        </div>
+                    </div>
+
+                    <div class="card card-danger">
+                        <div class="card-icon">
+                            <i class="fas fa-receipt"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Despesas do Mês</h3>
+                            <p class="card-value">R$ 0,00</p>
+                        </div>
+                    </div>
+
+                    <div class="card card-warning">
+                        <div class="card-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Comissões Pendentes</h3>
+                            <p class="card-value">R$ 0,00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="panel">
+                        <div class="panel-header">
+                            <h2>Atividades Recentes</h2>
+                        </div>
+                        <div class="panel-body">
+                            <p class="empty-state">Nenhuma atividade registrada ainda.</p>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-header">
+                            <h2>Próximos Vencimentos</h2>
+                        </div>
+                        <div class="panel-body">
+                            <p class="empty-state">Nenhum vencimento próximo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contratos Page -->
+            <div class="page" id="contratos">
+                <div class="page-header">
+                    <h1>Gestão de Contratos</h1>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Novo Contrato
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panel-body">
+                        <p class="empty-state">Em breve: Módulo de contratos</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Receitas Page -->
+            <div class="page" id="receitas">
+                <div class="page-header">
+                    <h1>Gestão de Receitas</h1>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Nova Receita
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panel-body">
+                        <p class="empty-state">Em breve: Módulo de receitas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Despesas Page -->
+            <div class="page" id="despesas">
+                <div class="page-header">
+                    <h1>Gestão de Despesas</h1>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Nova Despesa
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panel-body">
+                        <p class="empty-state">Em breve: Módulo de despesas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comissões Page -->
+            <div class="page" id="comissoes">
+                <div class="page-header">
+                    <h1>Gestão de Comissões</h1>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Nova Comissão
+                    </button>
+                </div>
+                <div class="panel">
+                    <div class="panel-body">
+                        <p class="empty-state">Em breve: Módulo de comissões</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Relatórios Page -->
+            <div class="page" id="relatorios">
+                <div class="page-header">
+                    <h1>Relatórios</h1>
+                </div>
+                <div class="panel">
+                    <div class="panel-body">
+                        <p class="empty-state">Em breve: Módulo de relatórios</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Configurações Page -->
+            <div class="page" id="configuracoes">
+                <div class="page-header">
+                    <h1>Configurações</h1>
+                </div>
+                <div class="panel">
+                    <div class="panel-body">
+                        <p class="empty-state">Em breve: Módulo de configurações</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
